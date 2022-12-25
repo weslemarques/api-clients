@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_clients")
+@Table(name = "tb_client")
 public class Client {
 
     @Id
@@ -20,7 +20,7 @@ public class Client {
     private String cpf;
     private Double income;
 
-    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+    @Column(name = "birth_Date", columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant birthDate;
     private Integer children;
 
