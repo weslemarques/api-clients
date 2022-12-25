@@ -1,0 +1,25 @@
+package com.wesle.clients.servicies;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.wesle.clients.dto.ClientDTO;
+import com.wesle.clients.entities.Client;
+import com.wesle.clients.repositories.ClientRepository;
+
+@Service
+public class ClientService {
+
+    @Autowired
+    private ClientRepository repository;
+
+    @Transactional(readOnly = true)
+    public Page<ClientDTO> findAllByPage(PageRequest pagequest) {
+        Page<Client> list = repository.findAll(pagequest);
+        return list.map(c -> new ClientDTO(c));
+    }
+
+}

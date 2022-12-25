@@ -1,1 +1,3 @@
-INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('PEdro', '134.124.155-00',234.5, TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 2);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Pedro', '134.124.155-00',234.5, TIMESTAMP WITH TIME ZONE '2000-07-13T20:50:07.12345Z', 2);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Joana', '757.765.887-00',234.5, TIMESTAMP WITH TIME ZONE '2001-03-13T20:50:07.12345Z', 2);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Maria', '432.422.232-00',234.5, TIMESTAMP WITH TIME ZONE '2003-02-13T20:50:07.12345Z', 2);
