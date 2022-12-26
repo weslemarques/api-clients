@@ -1,3 +1,9 @@
-INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Pedro', '134.124.155-00',234.5, TIMESTAMP WITH TIME ZONE '2000-07-13T20:50:07.12345Z', 2);
-INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Joana', '757.765.887-00',234.5, TIMESTAMP WITH TIME ZONE '2001-03-13T20:50:07.12345Z', 2);
-INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Maria', '432.422.232-00',234.5, TIMESTAMP WITH TIME ZONE '2003-02-13T20:50:07.12345Z', 2);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Pedro', '134.124.155-00',2334.5, TIMESTAMP WITH TIME ZONE '2000-07-13T20:50:07.12345Z', 2);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Joana', '757.765.887-00',20000.5, TIMESTAMP WITH TIME ZONE '2001-03-13T20:50:07.12345Z', 5);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Maria', '432.422.232-00',7214.5, TIMESTAMP WITH TIME ZONE '2003-02-13T20:50:07.12345Z', 3);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Paulo', '134.124.155-00',2934.5, TIMESTAMP WITH TIME ZONE '2000-07-13T20:50:07.12345Z', 1);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Ana', '757.765.887-00',2534.5, TIMESTAMP WITH TIME ZONE '2001-03-13T20:50:07.12345Z', 0);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Leo', '432.422.232-00',2234.5, TIMESTAMP WITH TIME ZONE '2003-02-13T20:50:07.12345Z', 4);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Mario', '134.155.124-00',9234.5, TIMESTAMP WITH TIME ZONE '2000-07-13T20:50:07.12345Z', 2);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Teo', '757.887.765-00',7234.5, TIMESTAMP WITH TIME ZONE '2001-03-13T20:50:07.12345Z', 7);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Lia', '432.232.422-00',4234.5, TIMESTAMP WITH TIME ZONE '2003-02-13T20:50:07.12345Z', 2);
