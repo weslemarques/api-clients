@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.wesle.clients.dto.ClientDTO;
 import com.wesle.clients.entities.Client;
 import com.wesle.clients.repositories.ClientRepository;
+import com.wesle.clients.servicies.exceptions.NotFoundException;
 
 @Service
 public class ClientService {
@@ -26,9 +27,8 @@ public class ClientService {
 
     @Transactional(readOnly = true)
     public ClientDTO findById(Long id) {
-
         Optional<Client> obj = repository.findById(id);
-        Client entity = obj.get();
+        Client entity = obj.orElseThrow(() -> new NotFoundException("Not found Id"));
         return new ClientDTO(entity);
     }
 
