@@ -3,6 +3,7 @@ package com.wesle.clients.servicies;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -12,6 +13,8 @@ import com.wesle.clients.dto.ClientDTO;
 import com.wesle.clients.entities.Client;
 import com.wesle.clients.repositories.ClientRepository;
 import com.wesle.clients.servicies.exceptions.NotFoundException;
+
+import jakarta.persistence.EntityNotFoundException;
 
 @Service
 public class ClientService {
@@ -40,6 +43,27 @@ public class ClientService {
         return new ClientDTO(entity);
     }
 
+    @Transactional
+    public ClientDTO update(Long id, ClientDTO dto) {
+        try {
+            @SuppressWarnings("deprecation")
+            Client entity = repository.getOne(id);
+            copyDtoForEntity(entity, dto);
+            entity = repository.save(entity);
+            return new ClientDTO(entity);
+        } catch (EntityNotFoundException e) {
+            throw new NotFoundException("Not found ID");
+        }
+    }
+
+    public void delete(Long id) {
+        try {
+            repository.deleteById(id);
+        } catch (EmptyResultDataAccessException e) {
+            throw new NotFoundException("Not found id ");
+        }
+    }
+
     private void copyDtoForEntity(Client entity, ClientDTO dto) {
         entity.setName(dto.getName());
         entity.setCpf(dto.getCpf());
@@ -48,5 +72,4 @@ public class ClientService {
         entity.setChildren(dto.getChildren());
 
     }
-
 }
