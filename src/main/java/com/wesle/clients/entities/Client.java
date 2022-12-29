@@ -1,5 +1,6 @@
 package com.wesle.clients.entities;
 
+import java.io.Serializable;
 import java.time.Instant;
 
 import jakarta.persistence.Column;
@@ -11,7 +12,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_client")
-public class Client {
+public class Client implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

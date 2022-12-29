@@ -1,10 +1,11 @@
 package com.wesle.clients.dto;
 
+import java.io.Serializable;
 import java.time.Instant;
 
 import com.wesle.clients.entities.Client;
 
-public class ClientDTO {
+public class ClientDTO implements Serializable {
 
     private Long id;
     private String name;
